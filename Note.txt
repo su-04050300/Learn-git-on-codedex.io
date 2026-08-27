@@ -13,6 +13,29 @@ https://www.codedex.io/git-github/
 指令: git remote add origin <repository_url>
 git remote add origin https://github.com/su-04050300/Learn-git-on-codedex.io.git
 
+
+改由ssh 連線
+>>先確認有ssh 金鑰，確認或建立好後複製公鑰
+
+指令: ls -al ~/.ssh # 確認有無ssh
+>>若有看見id_ed25519代表已經有金鑰了
+
+建立新的ssh金鑰
+指令: ssh-keygen -t ed25519 -C "你的GITHUB 註冊信箱"
+>>執行後會要確認路徑，照預設的就可以了。會問要不要設定密碼自行決定
+
+將ssh 加入ssh-agent
+指令: eval "$(ssh-agent -s)"
+指令: ssh-add ~/.ssh/id_ed25519
+
+複製公鑰內容
+指令: pbcopy < ~/.ssh/id_ed25519.pub
+
+
+將remote 跟local 串接
+指令: git remote set-url origin git@github.com:su-04050300/Learn-git-on-codedex.io.git
+
+
 設定git branch 
 指令: git branch -M main
 
@@ -39,5 +62,10 @@ local commit
 push 上 gitHub 
 指令: git push -u origin main # 第一次push
 指令: git push # 第二次push
+
+逐行看具體改了什麼
+指令: git diff
+
+
 
 

@@ -33,5 +33,11 @@ EOF
 指令: git add *.html # 加入同個檔案類型
 
 
-第一次commit
+local commit
 指令: git commit -m "這裡寫上commit備注"
+
+push 上 gitHub 
+指令: git push -u origin main # 第一次push
+指令: git push # 第二次push
+
+

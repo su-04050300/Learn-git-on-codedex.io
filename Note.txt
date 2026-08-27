@@ -1,0 +1,17 @@
+git note
+
+https://www.codedex.io/git-github/
+
+建立一個新的remote repo on gitHub
+>> Learn-git-on-codedex.io
+
+建立一個local repo 
+指令: git init
+>>應該是要先建立一個local目錄，並cd 到目錄下指令建立.git檔案
+
+將remote 跟local 串接
+指令: git remote add origin <repository_url>
+git remote add origin https://github.com/su-04050300/Learn-git-on-codedex.io.git
+
+設定git branch 
+指令: git branch -M main

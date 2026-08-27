@@ -15,3 +15,23 @@ git remote add origin https://github.com/su-04050300/Learn-git-on-codedex.io.git
 
 設定git branch 
 指令: git branch -M main
+
+設定git ignore
+cat > .gitignore << 'EOF'
+build/
+dist/
+*.spec
+EOF
+
+查看目前有什麼檔案
+指令: git status
+
+
+把所有檔案夾加進git 表
+指令: git add . # 所有檔案
+指令: git add example.txt # 加入指定檔案example.txt
+指令: git add *.html # 加入同個檔案類型
+
+
+第一次commit
+指令: git commit -m "這裡寫上commit備注"

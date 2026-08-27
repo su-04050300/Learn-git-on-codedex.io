@@ -73,6 +73,6 @@ push 上 gitHub
 指令: git diff
 
 
-
+第一章結束，第二章開始要錢了.... 
 
 

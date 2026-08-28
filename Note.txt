@@ -1,5 +1,5 @@
 git note
-https://www.codedex.io/git-github/
+學習網頁: https://www.codedex.io/git-github/
 
 建立一個新的remote repo on gitHub
 >> Learn-git-on-codedex.io
@@ -73,6 +73,26 @@ push 上 gitHub
 指令: git diff
 
 
-第一章結束，第二章開始要錢了.... 
+第一章結束，第二章開始要錢了....
+
+用新的網頁學習
+https://learngitbranching.js.org/?locale=zh_TWhttps%3A%2F%2Flearngitbranching.js.org%2F%3Flocale%3Dzh_TW 
+
+開新的branch
+指令: git checkout -b [NEW BRANCH NAME]
+
+透過指標轉換 來選擇commit 的branch
+指令: git checkout [NAME]
+
+
+merge
+指令: git merge [BRANCH NAME]
+
+git rebase
+rebasing 是 merge branch 的第二種方法。rebasing 就是取出一連串的 commit，"複製"它們，然後把它們接在別的地方。
+指令: git rebase [BRANCH NAME]
+要注意rebase的對象，讓HEAD留在要被複製的Branch 指令的Branch 是目的地
+
+
 
 

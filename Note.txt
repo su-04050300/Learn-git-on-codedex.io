@@ -94,5 +94,22 @@ rebasing 是 merge branch 的第二種方法。rebasing 就是取出一連串的
 要注意rebase的對象，讓HEAD留在要被複製的Branch 指令的Branch 是目的地
 
 
+head 
+當在做checkout branch 的時候head 一直都是跟著Branch 走，現在要分開就下指令check 節點就行
+例如現在main branch 在C4點，要在C4點分離出head
+指令: git checkout c4
+
+相對引用＾
+這個就是在Branch 上不確定節點名稱，但知道是前幾個節點，像指標一樣
+例如 要head 要在bugFix 的前兩個節點
+指令: git checkout bugFix^^ # head 去指向Bugfix 前兩個節點
+
+相對引用～
+就是覺得^^^^ 打太多很不好辨識，用~加數字
+git checkout bugFix^^ = git checkout bugFix~2
+
+git branch -f <branch> <commit>
+-f 是 force 的意思，會強制把已經存在的分支指標移到指定的 commit 上，不管原本 main 指向哪裡
+
 
 

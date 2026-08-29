@@ -94,10 +94,10 @@ rebasing 是 merge branch 的第二種方法。rebasing 就是取出一連串的
 要注意rebase的對象，讓HEAD留在要被複製的Branch 指令的Branch 是目的地
 
 
-head 
+head >>git checkout <commit>
 當在做checkout branch 的時候head 一直都是跟著Branch 走，現在要分開就下指令check 節點就行
 例如現在main branch 在C4點，要在C4點分離出head
-指令: git checkout c4
+指令: git checkout C4
 
 相對引用＾
 這個就是在Branch 上不確定節點名稱，但知道是前幾個節點，像指標一樣
@@ -112,4 +112,33 @@ git branch -f <branch> <commit>
 -f 是 force 的意思，會強制把已經存在的分支指標移到指定的 commit 上，不管原本 main 指向哪裡
 
 
+取消git的修改
 
+git reset <commit> 
+適用於local branch, 回到上一個節點的意思
+
+git revert <branch>
+適用於remote branch, 回朔之後會產生一個新的節點‘ 讓大家知道後回到上個節點的更新
+
+移動commit>> 把多接點接在目前Head 下 按順序
+git cherry-pick <Commit1> <Commit2> <...>
+
+
+rebase >> 
+git rebase -i HEAD~4
+執行後 Git 會打開一個編輯器，列出這 4 個 commit（由舊到新排列），每一行前面有個指令詞，例如：
+
+pick c1a2b3c commit message 1
+pick d4e5f6g commit message 2
+pick h7i8j9k commit message 3
+pick l0m1n2o commit message 4
+
+你可以修改每一行前面的指令，常見的有：
+
+pick：保留這個 commit 不變
+reword：保留內容，但可以修改 commit message
+edit：暫停在這個 commit，讓你可以修改內容（例如補充或修改檔案）
+squash：把這個 commit 合併進上一個 commit（會合併訊息）
+fixup：跟 squash 類似，但丟棄這個 commit 的訊息
+drop：直接刪除這個 commit
+也可以調換順序（改變行的排列順序
